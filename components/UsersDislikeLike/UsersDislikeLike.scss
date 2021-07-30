@@ -1,0 +1,52 @@
+@import '../../../utils/Mixins';
+.st-like-users{
+  position: absolute;
+  .st-like-users-wrap {
+    border-radius: 4px;
+    position: absolute;
+    top: 30px;
+    bottom: 20px;
+    right: 0;
+    left: -70px;
+    z-index: 2;
+    height: auto;
+    width: 170px;
+    .st-like-users-name {
+      @include textStyle($font-size-small, $color-white, bold);
+      text-align: center;
+      width: 170px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .st-like-users-names-wrap{
+      padding: $margin-large;
+      width: 170px;
+      background-color: black;
+      opacity: 0.9;
+    }
+  }
+  .st-like-users-arrow-top {
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 100%;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid black;
+    opacity: 0.9;
+  }
+  .st-like-users-arrow-bottom {
+    top: 4px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) rotate(180deg);
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 100%;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid black;
+    opacity: 0.9;
+  }
+}

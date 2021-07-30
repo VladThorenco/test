@@ -1,0 +1,59 @@
+@import '../../.././utils/Mixins.scss';
+
+$like-up: #3a79ee;
+$like-up-hover: #134bad;
+$like-down: #2c3552;
+
+.st-like-post-wrap {
+  display: flex;
+  margin-right: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  .st-like-counts {
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 4px;
+  }
+}
+
+.st-like-up {
+  fill: $color-blue;
+  &:hover {
+    fill: $like-up-hover;
+  }
+}
+
+.st-like-rotate {
+  transform: rotate(180deg);
+}
+
+.st-like-down {
+  fill: $like-down;
+  &:hover {
+    fill: $violent-violet;
+  }
+}
+
+.st-comment-like-wrap {
+  display: flex;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+  &::after {
+    @include st-after-dot ();
+  }
+  .st-comment-like-title {
+    color: #07D;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .st-comment-like-icon {
+    margin-left: 3px;
+    display: flex;
+    align-items: center;
+  }
+}
